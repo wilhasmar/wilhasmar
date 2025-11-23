@@ -3,97 +3,107 @@
 <html lang="pt-br">
 <head>
 <meta charset="utf-8"/>
-<title>Wilhasmar Ribeiro - Quiropraxista</title>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Wilhasmar Ribeiro - Quiropraxista</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background:#f4f7fb;
-    margin:0;
-}
-.header {
-    background:#0b3058;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-.header-logo {
-    height:140px;
-    object-fit:contain;
-}
-.container {
-    max-width:1100px;
-    margin:auto;
-    padding:20px;
-}
-.card {
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.15);
-    margin-top:20px;
-}
-.qr-img {
-    width:360px;
-    border-radius:12px;
-    display:block;
-    margin:auto;
-}
-.video-frame {
-    width:100%;
-    aspect-ratio:16/9;
-    border-radius:12px;
-    overflow:hidden;
-}
-.btn {
-    background:#12c2c8;
-    padding:14px 22px;
-    border-radius:12px;
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-.fab-ag, .fab-wa {
-    position:fixed;
-    right:20px;
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:32px;
-    text-decoration:none;
-    box-shadow:0 10px 30px rgba(0,0,0,0.25);
-}
-.fab-ag {
-    bottom:110px;
-    background:#0b3058;
-}
-.fab-wa {
-    bottom:20px;
-    background:#25D366;
-}
+body{font-family:Arial,sans-serif;margin:0;background:#f4f7fb;}
+header{background:#0b3058;color:white;text-align:center;padding:30px;position:relative;overflow:hidden;}
+header::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;
+background:linear-gradient(135deg,rgba(255,255,255,0.1),rgba(0,0,0,0.2));mix-blend-mode:overlay;animation:shine 6s infinite linear;}
+@keyframes shine{0%{transform:translateX(-100%);}100%{transform:translateX(100%);}}
+
+.header-logo{height:140px;margin-bottom:20px;}
+
+.container{max-width:1100px;margin:auto;padding:20px;}
+.section{margin-top:30px;}
+.card{background:white;padding:20px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,0.15);margin-top:20px;}
+
+.carousel{display:flex;overflow-x:auto;gap:16px;scroll-snap-type:x mandatory;padding:10px;}
+.carousel img{height:200px;border-radius:12px;scroll-snap-align:center;}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:15px;}
+.gallery img{width:100%;border-radius:12px;}
+
+.video-frame{width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;}
+
+.qr-img{width:360px;display:block;margin:auto;border-radius:12px;}
+
+.btn{background:#12c2c8;padding:14px 22px;border-radius:12px;color:white;text-decoration:none;font-weight:bold;display:inline-block;margin-top:10px;}
+
+.fab-wa,.fab-ag{position:fixed;right:20px;width:70px;height:70px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;font-size:32px;color:white;text-decoration:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);}
+.fab-wa{bottom:20px;background:#25D366;}
+.fab-ag{bottom:110px;background:#0b3058;}
 </style>
 </head>
+
 <body>
 
-<header class="header">
-    <img src="card-main.png" class="header-logo">
-    <h1>Wilhasmar Ribeiro - Quiropraxista</h1>
+<header>
+<img src="card-main.png" class="header-logo">
+<h1>Wilhasmar Ribeiro - Quiropraxista</h1>
+<p>Especialista em Hérnia de Disco e Dor Lombar</p>
 </header>
 
 <div class="container">
 
-    <div class="card video-frame">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kyhAbDrFNFY" frameborder="0" allowfullscreen></iframe>
-    </div>
+<!-- SOBRE MIM -->
+<div class="section card">
+<h2>Sobre Mim</h2>
+<p>Sou Wilhasmar Ribeiro, profissional especializado em Quiropraxia, tratamento de Hérnia de Disco,
+dores da coluna e reabilitação funcional. Minha missão é devolver mobilidade, reduzir dor e
+restaurar a qualidade de vida com técnicas modernas e personalizadas.</p>
+</div>
 
-    <div class="card">
-        <h2>Escaneie para WhatsApp / Instagram</h2>
-        <img src="card-qr.png" class="qr-img">
-    </div>
+<!-- SERVIÇOS -->
+<div class="section card">
+<h2>Serviços</h2>
+<ul>
+<li>Tratamento de Hérnia de Disco</li>
+<li>Realinhamento da Coluna</li>
+<li>Descompressão Vertebral</li>
+<li>Tratamento da Ciatalgia</li>
+<li>Terapia Manual Avançada</li>
+<li>Reabilitação Funcional</li>
+</ul>
+</div>
+
+<!-- DEPOMENTOS CARROSSEL -->
+<div class="section card">
+<h2>Depoimentos</h2>
+<div class="carousel">
+<img src="card-main.png">
+<img src="card-qr.png">
+<img src="card-main.png">
+</div>
+</div>
+
+<!-- GALERIA -->
+<div class="section card">
+<h2>Galeria</h2>
+<div class="gallery">
+<img src="card-main.png">
+<img src="card-qr.png">
+<img src="card-main.png">
+<img src="card-qr.png">
+</div>
+</div>
+
+<!-- VIDEOS FIXOS -->
+<div class="section card">
+<h2>Vídeos</h2>
+<div class="video-frame">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/kyhAbDrFNFY" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<!-- CONTATO -->
+<div class="section card">
+<h2>Escaneie para WhatsApp / Instagram</h2>
+<img src="card-qr.png" class="qr-img">
+<p style="text-align:center;margin-top:10px;"><strong>WhatsApp:</strong> (69) 98483-1097</p>
+</div>
 
 </div>
 
