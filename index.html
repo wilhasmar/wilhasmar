@@ -16,7 +16,7 @@
       --radius:14px;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Montserrat,system-ui,Arial,sans-serif;background-color:#f6f9fb;background-image:url('coluna.png');background-repeat:no-repeat;background-position:center center;background-size:85%;background-attachment:fixed;color:#072033;}
+    body{margin:0;font-family:Montserrat,system-ui,Arial,sans-serif;background-color:#f6f9fb;background-image:url('coluna.png');background-repeat:no-repeat;background-position:center top;background-size:85%;background-attachment:scroll;color:#072033;}
     a{color:inherit}
     header{
       background:linear-gradient(90deg,rgba(5,45,79,0.95),rgba(5,45,79,0.85));
@@ -93,7 +93,7 @@
 
 /* Mobile improvements */
 @media (max-width: 880px) {
-  body{background-attachment:scroll;background-size:120%;}
+  body{margin:0;font-family:Montserrat,system-ui,Arial,sans-serif;background-color:#f6f9fb;background-image:url('coluna.png');background-repeat:no-repeat;background-position:center top;background-size:85%;background-attachment:scroll;color:#072033;}
   .hero{grid-template-columns:1fr;gap:18px;}
   .hero-card{padding:20px;border-radius:16px;}
   .hero h2{font-size:28px;}
@@ -105,7 +105,7 @@
   .gallery img, .test-card img{width:56px;height:56px;}
   #qr-below{margin:18px 12px;padding:16px;max-width:100%;}
   /* reduce heavy background visibility on mobile for clarity */
-  body{background-image:none;}
+  body{margin:0;font-family:Montserrat,system-ui,Arial,sans-serif;background-color:#f6f9fb;background-image:url('coluna.png');background-repeat:no-repeat;background-position:center top;background-size:85%;background-attachment:scroll;color:#072033;}
 }
 
 /* Tap target and readability improvements */
@@ -227,7 +227,7 @@
 
   <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end;text-align:right;">
 
-    <div style="max-width:330px;color:#748089;font-size:16px;line-height:1.5;">Sou quiropraxista especializado em coluna e na reabilitação de pacientes com hérnia de disco, tendinites e fascite plantar. Minha missão é devolver sua liberdade de movimento e eliminar dores que limitam sua rotina. <br><br>Ao longo dos anos, me especializei em protocolos individualizados, cuidadosamente planejados para cada paciente — porque cada corpo reage de um jeito. Meu foco é proporcionar alívio rápido, recuperação funcional completa e prevenção de novas crises, sempre com uma abordagem humana, segura e baseada em evidências científicas. <br><br>Se você busca um tratamento eficaz, acolhedor e que realmente melhora sua qualidade de vida, estou aqui para ajudar.</div>
+    <div style="max-width:330px;color:#748089;font-size:16px;line-height:1.5;text-align:justify;">Sou quiropraxista especializado em coluna e na reabilitação de pacientes com hérnia de disco, tendinites e fascite plantar. Minha missão é devolver sua liberdade de movimento e eliminar dores que limitam sua rotina. <br><br>Ao longo dos anos, me especializei em protocolos individualizados, cuidadosamente planejados para cada paciente — porque cada corpo reage de um jeito. Meu foco é proporcionar alívio rápido, recuperação funcional completa e prevenção de novas crises, sempre com uma abordagem humana, segura e baseada em evidências científicas. <br><br>Se você busca um tratamento eficaz, acolhedor e que realmente melhora sua qualidade de vida, estou aqui para ajudar.</div>
 
     <img src="68f51f6b26d20f2f20fcd0e5cec75101_0.jpeg"
          style="width:240px;border-radius:14px;object-fit:contain;background:#000;
