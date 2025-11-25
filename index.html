@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Tratamento especializado em coluna, hérnia de disco, ciatalgia e descompressão vertebral com Wilhasmar Ribeiro, quiropraxista em Rondônia."
+    content="Tratamento especializado em coluna, hérnia de disco, ciatalgia e descompressão vertebral com Wilhasmar Ribeiro, quiropraxista em Cacoal - Rondônia."
   />
+
   <style>
     :root {
       --bg: #050509;
@@ -83,13 +84,14 @@
       height: 40px;
       border-radius: 50%;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .avatar img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
     .brand-text {
@@ -138,6 +140,8 @@
     main {
       margin-top: 16px;
     }
+
+    /* HERO */
 
     .hero {
       display: grid;
@@ -337,6 +341,7 @@
       gap: 10px;
       font-size: 11px;
       color: var(--muted);
+      flex-wrap: wrap;
     }
 
     .hero-bottom span {
@@ -421,11 +426,12 @@
       font-size: 13px;
     }
 
-    /* FOTO GRANDE NO "SOBRE MIM" */
+    /* FOTO GRANDE NO "SOBRE MIM" – 150x150 QUADRADA */
+
     .profile-photo-large {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border-radius: 0;
       overflow: hidden;
       margin-bottom: 10px;
       border: 2px solid rgba(255, 255, 255, 0.2);
@@ -438,7 +444,7 @@
       display: block;
     }
 
-    /* VÍDEOS RESPONSIVOS */
+    /* VÍDEOS / FRAMES RESPONSIVOS */
 
     .video-block {
       margin-top: 14px;
@@ -455,7 +461,7 @@
       margin-bottom: 6px;
     }
 
-    .video-frame {
+    .frame-16x9 {
       position: relative;
       width: 100%;
       max-width: 720px;
@@ -465,21 +471,21 @@
       background: #000;
     }
 
-    .video-frame::before {
+    .frame-16x9::before {
       content: "";
       display: block;
       padding-bottom: 56.25%;
     }
 
-    .video-frame iframe,
-    .video-frame video {
+    .frame-16x9 iframe,
+    .frame-16x9 video {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       border: 0;
       border-radius: 18px;
-      object-fit: contain; /* mostra o vídeo inteiro, sem cortar */
+      object-fit: contain;
       background: #000;
       display: block;
     }
@@ -516,7 +522,7 @@
       color: var(--muted);
     }
 
-    /* Contato */
+    /* Contato / QR / Mapa */
 
     .contact-grid {
       display: grid;
@@ -546,6 +552,39 @@
       height: 100%;
       display: block;
       object-fit: contain;
+    }
+
+    .map-block {
+      margin-top: 16px;
+      background: rgba(7, 9, 18, 0.96);
+      padding: 12px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .map-frame {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .map-frame::before {
+      content: "";
+      display: block;
+      padding-bottom: 56.25%;
+    }
+
+    .map-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     footer {
@@ -644,8 +683,8 @@
       <section class="hero" id="topo">
         <div class="hero-left">
           <div class="badge">
-            <span class="badge-dot"></span> Atendimento em Rondônia &middot;
-            Coluna · Hérnia de Disco · Ciatalgia
+            <span class="badge-dot"></span> Clínica Saracura · Coluna · Hérnia
+            de Disco · Ciatalgia
           </div>
 
           <h1>
@@ -655,7 +694,7 @@
           <p class="hero-sub">
             Tratamento especializado em coluna, combinando quiropraxia,
             descompressão vertebral e exercícios terapêuticos. Foco em reduzir
-            dor, recuperar movimentos e prevenir novas crises.
+            dor, recuperar movimentos e prevenir novas crises em Cacoal - RO.
           </p>
 
           <div class="hero-tags">
@@ -717,8 +756,8 @@
             </div>
 
             <div class="hero-bottom">
-              <span>📍 Rondônia · Brasil</span>
-              <span>🎯 Indicado para dor lombar, travamento e crises recorrentes</span>
+              <span>📍 Clínica Saracura · Cacoal - RO</span>
+              <span>🎯 Dor lombar, travamentos e crises recorrentes</span>
             </div>
           </div>
         </div>
@@ -835,7 +874,7 @@
         </div>
       </section>
 
-      <!-- NA PRÁTICA -->
+      <!-- NA PRÁTICA / VÍDEO YOUTUBE (se quiser manter) -->
       <section id="pratica">
         <h2>Na prática · Assista a um caso real</h2>
         <p class="lead">
@@ -847,7 +886,7 @@
         <div class="video-block">
           <div class="video-label">Vídeo demonstrativo de atendimento</div>
 
-          <div class="video-frame">
+          <div class="frame-16x9">
             <iframe
               src="https://www.youtube.com/embed/d5PzmnMLksw"
               title="Caso real de tratamento com Wilhasmar Ribeiro"
@@ -882,7 +921,7 @@
         <div class="video-block">
           <div class="video-label">Vídeo de evolução clínica</div>
 
-          <div class="video-frame">
+          <div class="frame-16x9">
             <video controls>
               <source src="2025-10-22-170540322.mp4" type="video/mp4" />
               Seu navegador não suporta o vídeo.
@@ -896,8 +935,9 @@
         </div>
 
         <div style="margin-top: 10px">
+          <!-- BOTÃO "QUERO AVALIAR MEU CASO" AGORA ABRE O MAPS -->
           <a
-            href="https://wa.me/5569984831097"
+            href="https://www.google.com/maps?q=Avenida+Amazonas+2991+Jardim+Clodoaldo+Cacoal+RO+76963-700"
             target="_blank"
             class="btn btn-primary"
             >Quero avaliar meu caso</a
@@ -952,23 +992,25 @@
         </div>
       </section>
 
-      <!-- CONTATO -->
+      <!-- CONTATO / LOCALIZAÇÃO -->
       <section id="contato">
         <h2>Pronto para cuidar da sua coluna?</h2>
         <p class="lead">
           Se você sente dor frequente, travamentos ou está preocupado com hérnia
           de disco, vamos avaliar seu caso com calma e montar uma estratégia de
-          tratamento adequada. Você pode agendar diretamente pela plataforma ou
-          chamar no WhatsApp para tirar dúvidas rápidas sobre o atendimento.
+          tratamento adequada. Você pode agendar diretamente pela plataforma,
+          chamar no WhatsApp ou vir até a clínica Saracura.
         </p>
 
         <div class="contact-grid">
           <div class="card">
             <h3>Agendamento e contato</h3>
             <p class="text-muted">
+              <strong>Clínica:</strong> Saracura<br />
+              <strong>Endereço:</strong> Avenida Amazonas, 2991 – Jardim
+              Clodoaldo<br />
+              Cacoal – Rondônia · CEP 76963-700<br /><br />
               <strong>WhatsApp:</strong> +55 (69) 98483-1097
-              <br />
-              <strong>Região:</strong> Rondônia · Brasil
             </p>
 
             <div class="pill-list" style="margin-top: 10px">
@@ -977,7 +1019,14 @@
               <span>Foco em função e movimento</span>
             </div>
 
-            <div style="margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap">
+            <div
+              style="
+                margin-top: 14px;
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+              "
+            >
               <a
                 href="https://ng.quarkclinic.com.br/app/profissional-saude/agendamentos"
                 target="_blank"
@@ -992,7 +1041,10 @@
               >
             </div>
 
-            <p class="text-muted" style="margin-top: 10px; font-size: 11px">
+            <p
+              class="text-muted"
+              style="margin-top: 10px; font-size: 11px"
+            >
               Em casos de dor intensa e súbita, perda de força ou alterações
               importantes de sensibilidade, procure atendimento médico de
               urgência.
@@ -1014,14 +1066,31 @@
             </p>
           </div>
         </div>
+
+        <!-- MAPA INCORPORADO DA CLÍNICA -->
+        <div class="map-block">
+          <div class="video-label">Como chegar na Clínica Saracura</div>
+          <div class="map-frame">
+            <iframe
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Avenida+Amazonas+2991+Jardim+Clodoaldo+Cacoal+RO+76963-700&output=embed"
+            ></iframe>
+          </div>
+          <div class="video-caption">
+            Avenida Amazonas, 2991 – Jardim Clodoaldo, Cacoal – RO, 76963-700.
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <span>© Wilhasmar Ribeiro · Quiropraxista. Todos os direitos reservados.</span>
+      <span
+        >© Wilhasmar Ribeiro · Quiropraxista na Clínica Saracura. Todos os
+        direitos reservados.</span
+      >
       <a href="#topo">Voltar ao topo ↑</a>
     </footer>
   </div>
 </body>
 </html>
-
